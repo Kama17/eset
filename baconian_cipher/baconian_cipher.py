@@ -57,8 +57,6 @@ def decode(text_to_decode:str) -> str:
         substring_of_5 = text_to_decode[i: i + 5]
         
         if substring_of_5 in cipher.keys():
-            if cipher[substring_of_5] == " ":
-                decoded_message += " "
             decoded_message += cipher[substring_of_5]
         i += 5
     print(f"Your decoded message is: {decoded_message}")
