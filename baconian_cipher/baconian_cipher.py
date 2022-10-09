@@ -23,7 +23,7 @@ def read_file() -> str:
         with open(path,"r") as file:
             contents = file.read()
     except FileNotFoundError:
-        sys.exit("File cannot be open")
+        sys.exit("File cannot be opened")
     return contents
 
 
