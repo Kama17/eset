@@ -43,14 +43,14 @@ def search_for_passcode(keylog_data:List[str], keylog_unique_values:List[str]) -
     Postcondition: The output is the possible passcode of the length of keylog_unique_values.
     """
     for lists in keylog_data:
-        first_index = unique_values.index(lists[0])
-        second_index = unique_values.index(lists[1])
-        third_index = unique_values.index(lists[2])       
+        first_index = keylog_unique_values.index(lists[0])
+        second_index = keylog_unique_values.index(lists[1])
+        third_index = keylog_unique_values.index(lists[2])       
         if first_index > second_index:
-            unique_values[first_index], unique_values[second_index] = unique_values[second_index], unique_values[first_index]    
+            keylog_unique_values[first_index], keylog_unique_values[second_index] = keylog_unique_values[second_index], keylog_unique_values[first_index]    
         elif second_index > third_index:
-            unique_values[second_index], unique_values[third_index] = unique_values[third_index], unique_values[second_index]      
-    return unique_values
+            keylog_unique_values[second_index], keylog_unique_values[third_index] = keylog_unique_values[third_index], keylog_unique_values[second_index]      
+    return keylog_unique_values
 
 
 def list_to_string(unique_values_sorted:List[str]) -> str:
@@ -60,7 +60,7 @@ def list_to_string(unique_values_sorted:List[str]) -> str:
     Postconditions: The output is a string.
     """
     string = ""
-    for digit in passcode:
+    for digit in unique_values_sorted:
         string += digit
     print(f"The possible passcode is: {string}")
 
