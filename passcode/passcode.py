@@ -18,11 +18,11 @@ def read_file():
     except FileNotFoundError:
         sys.exit("File cannot be opened")
     except IndexError:
-        sys.exit("No file spefified")
+        sys.exit("No file specified")
     
 
 def get_unique_values(keylog_data:List[str]) -> List:
-    """Returns the list of the unique values from the file
+    """Returns the list of the unique values from the file.
     
     Preconditions: keylog_data = text file.
     Postconditions: The output is the unique values.
