@@ -77,7 +77,7 @@ def encode(user_text:str) -> str:
             if value == i.lower():
                 for char in key:
                     encoded_massage += random_letter(char)
-    print(f"Your encoded massage is: {encoded_massage}")
+    print(f"Your encoded message is: {encoded_massage}")
 
 
 def random_letter(letter: String[1]) -> String[1]:
